@@ -60,7 +60,7 @@
 	        var geo = new THREE.ConeGeometry(9, 6, 10, 10); //(jari-jari alas, tinggi, banyak sisi alas, sisi samping)
 	        var material = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load('img/roof.jpg')});
 	        var pyramid = new THREE.Mesh(geo, material);
-	        pyramid.position.y=5;
+	        pyramid.position.y=3;
 	        house.add(pyramid);
 
 	        var geometry = new THREE.CylinderGeometry( 1, 1 , 30, 32 ,true);
