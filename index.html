@@ -52,25 +52,25 @@
 		function rumah() {
 			house = new THREE.Group();   
 	        var geometry = new THREE.CylinderGeometry( 5, 6, 10, 32 );
-	        var material = new THREE.MeshBasicMaterial( {color: 0xffff00, wireframe:true} );
+	        var material = new THREE.MeshBasicMaterial( {map: new THREE.TextureLoader().load('img/wood.jpg')} );
 	        var cylinder = new THREE.Mesh( geometry, material );
 	        house.add( cylinder );
 
 	        var geo = new THREE.ConeGeometry(9, 6, 10, 10); //(jari-jari alas, tinggi, banyak sisi alas, sisi samping)
-	        var material = new THREE.MeshBasicMaterial({color: 0x00ffd9, wireframe: true});
+	        var material = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load('img/roof.jpg')});
 	        var pyramid = new THREE.Mesh(geo, material);
 	        pyramid.position.y=7;
 	        house.add(pyramid);
 
 	        var geometry = new THREE.CylinderGeometry( 1, 1 , 30, 32 ,true);
-	        var material = new THREE.MeshBasicMaterial( {color: 0xffff00, wireframe:true} );
+	        var material = new THREE.MeshBasicMaterial( {map: new THREE.TextureLoader().load('img/wood.jpg')} );
 	        var cylinder = new THREE.Mesh( geometry, material );
 	        cylinder.position.y=9;
 	        cylinder.position.x=-13;
 	        house.add( cylinder );
 
 	        var geo = new THREE.ConeGeometry(2, 4, 32, 10); //(jari-jari alas, tinggi, banyak sisi alas, sisi samping)
-	        var material = new THREE.MeshBasicMaterial({color: 0x00ffd9, wireframe: true});
+	        var material = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load('img/roof.jpg')});
 	        var pyramid = new THREE.Mesh(geo, material);
 	        pyramid.position.x=-13;
 	        pyramid.position.y=25;
@@ -80,13 +80,13 @@
 		function tanah() {
 			var rumputgeo = new THREE.CylinderBufferGeometry( 30, 20, 5, 20  );
 			// var texture = new THREE.TextureLoader().load( 'texture/grass.jpg' );
-			var rumputmaterial = new THREE.MeshBasicMaterial( {color: 0x00ff00, wireframe: true} );
+			var rumputmaterial = new THREE.MeshBasicMaterial( {map: new THREE.TextureLoader().load('img/grass.jpg')} );
 			var rumput = new THREE.Mesh( rumputgeo, rumputmaterial );
 			rumput.position.y = -8;
 			scene.add (rumput);
 			var rumputgeo1 = new THREE.CylinderBufferGeometry( 20, 5, 30, 20 );
 			// var texture1 = new THREE.TextureLoader().load( 'texture/rock.jpg' );
-			var rumputmaterial1 = new THREE.MeshBasicMaterial( {color: 0xff0d0f, wireframe: true} );
+			var rumputmaterial1 = new THREE.MeshBasicMaterial( {map: new THREE.TextureLoader().load('img/rock.jpg')} );
 			var rumput1 = new THREE.Mesh( rumputgeo1, rumputmaterial1 );
 			rumput1.position.set(0,-26,0);
 			scene.add( rumput1 );
