@@ -54,6 +54,7 @@
 	        var geometry = new THREE.CylinderGeometry( 5, 6, 10, 32 );
 	        var material = new THREE.MeshBasicMaterial( {map: new THREE.TextureLoader().load('img/wood.jpg')} );
 	        var cylinder = new THREE.Mesh( geometry, material );
+		cylinder.position.set(0,-1,0);
 	        house.add( cylinder );
 
 	        var geo = new THREE.ConeGeometry(9, 6, 10, 10); //(jari-jari alas, tinggi, banyak sisi alas, sisi samping)
