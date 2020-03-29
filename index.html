@@ -21,13 +21,13 @@
 		 	ambient = new THREE.AmbientLight(0xffffff);
 		 	scene.add(ambient);
 
-		 	directionalLight = new THREE.DirectionalLight(0xffeedd);
+		 	directionalLight = new THREE.DirectionalLight(0xd2d4d6);
 		 	directionalLight.position.set(0,400,0);
 		 	scene.add(directionalLight);
 
 		 	var light = new THREE.DirectionalLight(0xffffff);
-	        light.position.set(0, 10, 10);
-	        scene.add(light);
+			light.position.set(0, 10, 10);
+			scene.add(light);
 
 		 	renderer = new THREE.WebGLRenderer();
 		 	renderer.setSize(window.innerWidth, window.innerHeight);
