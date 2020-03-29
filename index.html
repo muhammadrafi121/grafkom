@@ -194,8 +194,8 @@
 		 		let cloud = new THREE.Mesh(cloudGeo, cloudMaterial);
 		 		cloud.position.set(
 		 			Math.random()*500-100, -90, Math.random()*800-220);
-		 		// cloud.rotation.x = 1.10;
-		 		// cloud.rotation.y = -0.10;
+		 		cloud.rotation.x = 1.10;
+		 		cloud.rotation.y = -0.10;
 		 		cloud.rotation.z = Math.random()*360;
 		 		cloud.material.opacity = 0.6;
 		 		cloudPartical.push(cloud);
