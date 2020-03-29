@@ -18,11 +18,11 @@
 		 	camera = new THREE.PerspectiveCamera(60, window.innerWidth/window.innerHeight , 1, 500);
 		 	camera.position.z = 200;
 
-		 	ambient = new THREE.AmbientLight(0xffffff);
+		 	ambient = new THREE.AmbientLight(0x00ff00);
 		 	scene.add(ambient);
 
-		 	directionalLight = new THREE.DirectionalLight(0xff0000);
-		 	directionalLight.position.set(0,400,0);
+		 	directionalLight = new THREE.DirectionalLight(0xffffff);
+		 	directionalLight.position.set(0,200,0);
 		 	scene.add(directionalLight);
 
 		 	var light = new THREE.DirectionalLight(0xffffff);
