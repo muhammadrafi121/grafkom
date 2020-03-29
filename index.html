@@ -51,32 +51,32 @@
 		}
 		function rumah() {
 			house = new THREE.Group();   
-	        var geometry = new THREE.CylinderGeometry( 5, 6, 10, 32 );
-	        var material = new THREE.MeshBasicMaterial( {map: new THREE.TextureLoader().load('img/wood.jpg')} );
-	        var cylinder = new THREE.Mesh( geometry, material );
-		cylinder.position.set(0,-3,0);
-	        house.add( cylinder );
+			var geometry = new THREE.CylinderGeometry( 5, 6, 10, 32 );
+			var material = new THREE.MeshBasicMaterial( {map: new THREE.TextureLoader().load('img/wood.jpg')} );
+			var cylinder = new THREE.Mesh( geometry, material );
+			cylinder.position.set(0,-3,0);
+			house.add( cylinder );
 
-	        var geo = new THREE.ConeGeometry(9, 6, 10, 10); //(jari-jari alas, tinggi, banyak sisi alas, sisi samping)
-	        var material = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load('img/roof.jpg')});
-	        var pyramid = new THREE.Mesh(geo, material);
-	        pyramid.position.y=3;
-	        house.add(pyramid);
+			var geo = new THREE.ConeGeometry(9, 6, 10, 10); //(jari-jari alas, tinggi, banyak sisi alas, sisi samping)
+			var material = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load('img/roof.jpg')});
+			var pyramid = new THREE.Mesh(geo, material);
+			pyramid.position.y=3;
+			house.add(pyramid);
 
-	        var geometry = new THREE.CylinderGeometry( 1, 1 , 30, 32 ,true);
-	        var material = new THREE.MeshBasicMaterial( {map: new THREE.TextureLoader().load('img/wood.jpg')} );
-	        var cylinder = new THREE.Mesh( geometry, material );
-	        cylinder.position.y=9;
-	        cylinder.position.x=-13;
-	        house.add( cylinder );
+			var geometry = new THREE.CylinderGeometry( 1, 1 , 30, 32 ,true);
+			var material = new THREE.MeshBasicMaterial( {map: new THREE.TextureLoader().load('img/wood.jpg')} );
+			var cylinder = new THREE.Mesh( geometry, material );
+			cylinder.position.y=9;
+			cylinder.position.x=-13;
+			house.add( cylinder );
 
-	        var geo = new THREE.ConeGeometry(2, 4, 32, 10); //(jari-jari alas, tinggi, banyak sisi alas, sisi samping)
-	        var material = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load('img/roof.jpg')});
-	        var pyramid = new THREE.Mesh(geo, material);
-	        pyramid.position.x=-13;
-	        pyramid.position.y=25;
-	        house.add(pyramid);
-	        scene.add(house);
+			var geo = new THREE.ConeGeometry(2, 4, 32, 10); //(jari-jari alas, tinggi, banyak sisi alas, sisi samping)
+			var material = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load('img/roof.jpg')});
+			var pyramid = new THREE.Mesh(geo, material);
+			pyramid.position.x=-13;
+			pyramid.position.y=25;
+			house.add(pyramid);
+			scene.add(house);
 		}
 		function tanah() {
 			var rumputgeo = new THREE.CylinderBufferGeometry( 30, 20, 5, 20  );
@@ -94,88 +94,88 @@
 		}
 		function awan() {
 			var cloud = new THREE.Group();
-	        var geometry = new THREE.SphereGeometry( 3, 32, 32 );
-	        var material = new THREE.MeshLambertMaterial( {color: 0xffffff, wireframe:false} );
-	        var sphere = new THREE.Mesh( geometry, material );
-	        sphere.position.x=9;
-	        cloud.add( sphere );
+			var geometry = new THREE.SphereGeometry( 3, 32, 32 );
+			var material = new THREE.MeshDepthMaterial( {color: 0xffffff, wireframe:false} );
+			var sphere = new THREE.Mesh( geometry, material );
+			sphere.position.x=9;
+			cloud.add( sphere );
 
-	        var geometry = new THREE.SphereGeometry( 4, 32, 32 );
-	        var material = new THREE.MeshLambertMaterial( {color: 0xffffff, wireframe:false} );
-	        var sphere = new THREE.Mesh( geometry, material );
-	        sphere.position.x=6;
-	        sphere.position.z=-6;
-	        cloud.add( sphere );
+			var geometry = new THREE.SphereGeometry( 4, 32, 32 );
+			var material = new THREE.MeshDepthMaterial( {color: 0xffffff, wireframe:false} );
+			var sphere = new THREE.Mesh( geometry, material );
+			sphere.position.x=6;
+			sphere.position.z=-6;
+			cloud.add( sphere );
 
-	        var geometry = new THREE.SphereGeometry( 4, 32, 32 );
-	        var material = new THREE.MeshLambertMaterial( {color: 0xffffff, wireframe:false} );
-	        var sphere = new THREE.Mesh( geometry, material );
-	        sphere.position.x=9;
-	        sphere.position.z=-4;
-	        cloud.add( sphere );
-	        
-	        var geometry = new THREE.SphereGeometry( 4, 32, 32 );
-	        var material = new THREE.MeshLambertMaterial( {color: 0xffffff, wireframe:false} );
-	        var sphere = new THREE.Mesh( geometry, material );
-	        cloud.add( sphere );
+			var geometry = new THREE.SphereGeometry( 4, 32, 32 );
+			var material = new THREE.MeshDepthMaterial( {color: 0xffffff, wireframe:false} );
+			var sphere = new THREE.Mesh( geometry, material );
+			sphere.position.x=9;
+			sphere.position.z=-4;
+			cloud.add( sphere );
 
-	        var geometry = new THREE.SphereGeometry( 3, 32, 32 );
-	        var material = new THREE.MeshLambertMaterial( {color: 0xffffff, wireframe:false} );
-	        var sphere = new THREE.Mesh( geometry, material );
-	        sphere.position.x=4;
-	        sphere.position.z=-4
-	        sphere.position.y=3;
-	        cloud.add( sphere );
+			var geometry = new THREE.SphereGeometry( 4, 32, 32 );
+			var material = new THREE.MeshDepthMaterial( {color: 0xffffff, wireframe:false} );
+			var sphere = new THREE.Mesh( geometry, material );
+			cloud.add( sphere );
 
-	        var geometry = new THREE.SphereGeometry( 3, 32, 32 );
-	        var material = new THREE.MeshLambertMaterial( {color: 0xffffff, wireframe:false} );
-	        var sphere = new THREE.Mesh( geometry, material );
-	        sphere.position.x=-4;
-	        sphere.position.y=2;
-	        cloud.add( sphere );
+			var geometry = new THREE.SphereGeometry( 3, 32, 32 );
+			var material = new THREE.MeshDepthMaterial( {color: 0xffffff, wireframe:false} );
+			var sphere = new THREE.Mesh( geometry, material );
+			sphere.position.x=4;
+			sphere.position.z=-4
+			sphere.position.y=3;
+			cloud.add( sphere );
 
-	        var geometry = new THREE.SphereGeometry( 2, 32, 32 );
-	        var material = new THREE.MeshLambertMaterial( {color: 0xffffff, wireframe:false} );
-	        var sphere = new THREE.Mesh( geometry, material );
-	        sphere.position.x=5;
-	        cloud.add( sphere );
+			var geometry = new THREE.SphereGeometry( 3, 32, 32 );
+			var material = new THREE.MeshDepthMaterial( {color: 0xffffff, wireframe:false} );
+			var sphere = new THREE.Mesh( geometry, material );
+			sphere.position.x=-4;
+			sphere.position.y=2;
+			cloud.add( sphere );
 
-	        var geometry = new THREE.SphereGeometry( 2, 32, 32 );
-	        var material = new THREE.MeshLambertMaterial( {color: 0xffffff, wireframe:false} );
-	        var sphere = new THREE.Mesh( geometry, material );
-	        sphere.position.x=-4;
-	        sphere.position.y=-1;
-	        cloud.add( sphere ); 
+			var geometry = new THREE.SphereGeometry( 2, 32, 32 );
+			var material = new THREE.MeshDepthMaterial( {color: 0xffffff, wireframe:false} );
+			var sphere = new THREE.Mesh( geometry, material );
+			sphere.position.x=5;
+			cloud.add( sphere );
 
-	        var geometry = new THREE.SphereGeometry( 1, 32, 32 );
-	        var material = new THREE.MeshLambertMaterial( {color: 0xffffff, wireframe:false} );
-	        var sphere = new THREE.Mesh( geometry, material );
-	        sphere.position.x=6;
-	        sphere.position.z=2;
-	        cloud.add( sphere );    
+			var geometry = new THREE.SphereGeometry( 2, 32, 32 );
+			var material = new THREE.MeshDepthMaterial( {color: 0xffffff, wireframe:false} );
+			var sphere = new THREE.Mesh( geometry, material );
+			sphere.position.x=-4;
+			sphere.position.y=-1;
+			cloud.add( sphere ); 
 
-	        var geometry = new THREE.SphereGeometry( 3, 32, 32 );
-	        var material = new THREE.MeshLambertMaterial( {color: 0xffffff, wireframe:false} );
-	        var sphere = new THREE.Mesh( geometry, material );
-	        sphere.position.z=3;
-	        cloud.add( sphere ); 
+			var geometry = new THREE.SphereGeometry( 1, 32, 32 );
+			var material = new THREE.MeshDepthMaterial( {color: 0xffffff, wireframe:false} );
+			var sphere = new THREE.Mesh( geometry, material );
+			sphere.position.x=6;
+			sphere.position.z=2;
+			cloud.add( sphere );    
 
-	        var geometry = new THREE.SphereGeometry( 1, 32, 32 );
-	        var material = new THREE.MeshLambertMaterial( {color: 0xffffff, wireframe:false} );
-	        var sphere = new THREE.Mesh( geometry, material );
-	        sphere.position.x=-7;
-	        sphere.position.z=-2;
-	        sphere.position.y=2;
-	        cloud.add( sphere );
+			var geometry = new THREE.SphereGeometry( 3, 32, 32 );
+			var material = new THREE.MeshDepthMaterial( {color: 0xffffff, wireframe:false} );
+			var sphere = new THREE.Mesh( geometry, material );
+			sphere.position.z=3;
+			cloud.add( sphere ); 
 
-	        var geometry = new THREE.SphereGeometry( 3, 32, 32 );
-	        var material = new THREE.MeshLambertMaterial( {color: 0xffffff, wireframe:false} );
-	        var sphere = new THREE.Mesh( geometry, material );
-	        sphere.position.x=13;
-	        //sphere.position.z=;
-	        sphere.position.y=2;
-	        cloud.add( sphere );
-	        return cloud;
+			var geometry = new THREE.SphereGeometry( 1, 32, 32 );
+			var material = new THREE.MeshDepthMaterial( {color: 0xffffff, wireframe:false} );
+			var sphere = new THREE.Mesh( geometry, material );
+			sphere.position.x=-7;
+			sphere.position.z=-2;
+			sphere.position.y=2;
+			cloud.add( sphere );
+
+			var geometry = new THREE.SphereGeometry( 3, 32, 32 );
+			var material = new THREE.MeshDepthMaterial( {color: 0xffffff, wireframe:false} );
+			var sphere = new THREE.Mesh( geometry, material );
+			sphere.position.x=13;
+			//sphere.position.z=;
+			sphere.position.y=2;
+			cloud.add( sphere );
+			return cloud;
 		}
 		function kabut() {
 
